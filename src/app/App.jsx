@@ -11,6 +11,7 @@ import AllTasks from '../components/AllTasks/AllTasks';
 import AddTask from '../components/AddTask/AddTask';
 import Header from '../components/Header/Header';
 import TaskDetails from '../components/TaskDetails/TaskDetails';
+import InitialNotification from '../components/InitalNotification/InitialNotification';
 
 function App() {
   const [currentTasks, setCurrentTasks] = useState([]);
@@ -30,7 +31,6 @@ function App() {
 
   const handleTaskClick = (taskId) => {
     const newTasks = currentTasks.map((i) => {
-      console.log(i);
       if (i.id === taskId) {
         return {...i, completed: !i.completed};
       } else {
@@ -66,13 +66,21 @@ function App() {
     <Router>
       <div className={styles.container}>
         <Header />
+
         <Route
           path="/"
           exact
           render={() => (
             <>
               <AddTask handleTaskAddition={handleTaskAddition}/>
-              < AllTasks allTasks={currentTasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion}/>
+
+              < AllTasks
+                allTasks={currentTasks}
+                handleTaskClick={handleTaskClick}
+                handleTaskDeletion={handleTaskDeletion}
+              />
+
+              <InitialNotification currentTasks={currentTasks.length}/>
             </>
           )}
         />
@@ -82,6 +90,7 @@ function App() {
           exact
           component={TaskDetails}
         />
+        
       </div>
     </Router>
   )

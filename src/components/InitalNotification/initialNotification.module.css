@@ -1,0 +1,12 @@
+.NotificationContainer {
+  margin: 2.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.notificationText {
+  background-color: #222;
+  color: #eee;
+}
