@@ -1,6 +1,6 @@
 .taskContainer {
+  height: 3rem;
   margin: 0.5rem 0;
-  padding: 1rem 1.25rem;
 
   display: flex;
   align-items: center;
@@ -13,15 +13,29 @@
 }
 
 .taskTitle {
+  display: flex;
+  height: 100%;
+  border-radius: 5px;
   background-color: #444;
   cursor: pointer;
 }
-.taskTitle:hover {
-  font-weight: 500;
+
+.taskTitle p {
+  margin: 1rem 0.5rem;
+  background-color: #444;
+}
+
+.checkIcon {
+  display: flex;
+
+  color: chartreuse;
+  background-color: #444;
 }
 
 .buttonsContainer{
-  margin-left: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  margin: 0 0.5rem;
   display: flex;
   gap: 0.5rem;
 
@@ -32,11 +46,15 @@
 }
 
 .taskButtons{
+  height: 3rem;
+  display: flex;
+  align-items: center;
+
   background-color: #444;
-  border: none;
   color: chartreuse;
-  cursor: pointer;
+  border: none;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .taskButtons svg {

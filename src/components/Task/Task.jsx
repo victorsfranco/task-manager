@@ -1,5 +1,5 @@
 import styles from './Task.module.css'
-import {CgClose, CgInfo, CgCheckO} from 'react-icons/cg'
+import {CgClose, CgInfo, CgCheckO, CgCheckR} from 'react-icons/cg'
 import { useHistory } from 'react-router-dom'
 
 const Task = ({task, handleTaskClick, handleTaskDeletion}) => {
@@ -11,12 +11,12 @@ const Task = ({task, handleTaskClick, handleTaskDeletion}) => {
   }
 
   return (
-    <div className={styles.taskContainer} style={task.completed ? {borderLeft: "6px solid chartreuse", textDecoration: "line-through"} : {}}>
+    <div className={styles.taskContainer} style={task.completed ? {textDecoration: "line-through"} : {}}>
 
-      {/* <CgCheckO /> */}
 
       <div className={styles.taskTitle} onClick={() => handleTaskClick(task.id)}>
-        {task.title}
+        <CgCheckR className={styles.checkIcon} style={task.completed ? {opacity: "1", transition: "0.2s"} : {opacity: "0", transition: "0.2s" }}/>
+        <p>{task.title}</p>  
       </div>
 
       <div className={styles.buttonsContainer}>
