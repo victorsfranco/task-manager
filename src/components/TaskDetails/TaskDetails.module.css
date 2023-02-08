@@ -1,0 +1,21 @@
+.buttonContainer {
+  width: 30%;
+  margin: 0.5rem 0;
+}
+
+.infoContainer {
+  margin: 0.5rem 0;
+  border-radius: 10px;
+}
+
+.title {
+  color: chartreuse;
+  background-color: #555;
+  padding: .75rem 1rem .5rem 1rem;
+}
+
+.details {
+  color: #eee;
+  background-color: #555;
+  padding: 0 1rem .5rem 1rem;
+}

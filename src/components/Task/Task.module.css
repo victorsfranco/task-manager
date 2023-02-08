@@ -1,0 +1,44 @@
+.taskContainer {
+  margin: 0.5rem 0;
+  padding: 1rem 1.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #eee;
+  background-color: #444;
+  border-radius: 5px;
+
+}
+
+.taskTitle {
+  background-color: #444;
+  cursor: pointer;
+}
+.taskTitle:hover {
+  font-weight: 500;
+}
+
+.buttonsContainer{
+  margin-left: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+
+  background-color: #444;
+  color: chartreuse;
+  border: none;
+
+}
+
+.taskButtons{
+  background-color: #444;
+  border: none;
+  color: chartreuse;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.taskButtons svg {
+  background-color: #444;
+}
